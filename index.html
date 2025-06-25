@@ -86,12 +86,10 @@
             maybeButton.style.top = `${y}px`;
         }
 
-        // Move maybe later button on hover/touch
         maybeButton.addEventListener("mouseenter", function() {
             moveCount++;
             positionMaybeButton();
-            
-            // After several moves, make it easier to catch
+
             if (moveCount >= maxMoves) {
                 maybeButton.style.animation = "none";
                 setTimeout(() => {
